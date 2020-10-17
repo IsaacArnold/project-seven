@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="">
 </head>
 <body>
-    
+
 <!---- Top banner ---->
     <header>
         <h1>Isaac's App</h1>
@@ -41,8 +41,76 @@
 
 <!---- Widget section ---->
     <main>
+        <div class="main-header">
+            <h2 class="headline">Dashboard</h2>
+            <div class="main-header-search">
+                <input type="search" placeholder="Search...">
+            </div>
+        </div>
+        <!-- Alert bar -->
+        <div class="alert" id="alert">
+            <!-- JS will insert alert here -->
+        </div>
+        <!-- Line graph charts -->
+        <section class="traffic">
+            <div class="traffic-header">
+                <h3>Traffic</h3>
+                <ul class="traffic-nav">
+                    <li class="traffic-nav-link">Hourly</li>
+                    <li class="traffic-nav-link">Daily</li>
+                    <li class="traffic-nav-link active">Weekly</li>
+                    <li class="traffic-nav-link">Monthly</li>
+                </ul>
+            </div>
+            <div class="widget-container-full">
+                <canvas id="traffic-chart"></canvas>
+            </div>
+        </section>
+        <!-- Bar graph -->
+        <section class="daily">
+            <h3>Daily Traffic</h3>
+            <div class="widget-container-half">
+                <canvas id="daily-chart"></canvas>
+            </div>
+        </section>
+        <!-- Pie chart -->
+        <section class="pie">
+            <h3>Mobile Users</h3>
+            <div class="widget-container-half">
+                <canvas id="pie-chart"></canvas>
+            </div>
+        </section>
+        <!-- Social stats container -->
+        <div>
+            <div class="social-container">
+                <div class="social-image">
 
-    </main>
+                </div>
+                <div class="social-text">
+                    <p>Twitter</p>
+                    <p>10,345</p>
+                </div>
+            </div>
+            <div class="social-container">
+                <div class="social-image">
+
+                </div>
+                <div class="social-text">
+                    <p>Facebook</p>
+                    <p>8,739</p>
+                </div>
+            </div>
+            <div class="social-container">
+                <div class="social-image">
+
+                </div>
+                <div class="social-text">
+                    <p>Google+</p>
+                    <p>2,530</p>
+                </div>
+            </div>
+        </div>
+    </main> 
 
 </body>
 </html>
