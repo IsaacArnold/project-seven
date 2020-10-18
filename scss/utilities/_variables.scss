@@ -1,0 +1,35 @@
+/* ============================================= */
+/*              Color Variables                      */
+/* ============================================= */
+
+$brand-color-primary: #58e1c1;
+$brand-color-secondary: #51ddfc;
+$main-text-color: #777;
+$btn-txt: #fff;
+$col-3-color: #deb2ee;
+
+// Buttons
+$default: $brand-color-secondary;
+$error: #e4757a;
+$info: #927bc1;
+$success: #63cc82;
+$warning: #fd7856;
+
+// Button lighten affect -- idea credit: vacaglenn123 Github repo: 4th-techdegree --
+$default-lighten: lighten($default, 15%);
+$error-lighten: lighten($error, 15%);
+$info-lighten: lighten($info, 15%);
+$success-lighten: lighten($success, 15%);
+$warning-lighten: lighten($warning, 15%);
+
+/* ============================================= */
+/*              Media Query Variables                      */
+/* ============================================= */
+
+$breakpoint: 768px;
+
+/* ============================================= */
+/*              Layout Variables                      */
+/* ============================================= */
+
+$max-width: 14000px;
