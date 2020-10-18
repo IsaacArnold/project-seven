@@ -1,0 +1,28 @@
+/* ============================================= */
+/*        Grid Layout - Mobile first: 320px      */
+/* ============================================= */
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "header"
+    "nav"
+    "main";
+}
+
+header {
+    grid-area: "header";
+}
+nav {
+    grid-area: "nav";
+}
+main {
+    grid-area: "main";
+}
+
+.widget-container-full,
+.widget-container-half {
+    width: 95vw;
+}

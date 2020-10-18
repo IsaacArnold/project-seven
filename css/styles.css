@@ -392,106 +392,69 @@ a {
 }
 
 /* ============================================= */
+/*        Grid Layout - Mobile first: 320px      */
+/* ============================================= */
+.grid-container {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: auto;
+  grid-template-areas: "header" "nav" "main";
+}
+
+header {
+  grid-area: "header";
+}
+
+nav {
+  grid-area: "nav";
+}
+
+main {
+  grid-area: "main";
+}
+
+.widget-container-full,
+.widget-container-half {
+  width: 95vw;
+}
+
+/* ============================================= */
 /*              Media Queries                    */
 /* ============================================= */
 @media (min-width: 768px) {
-  .container {
-    max-width: 14000px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+  .grid-container {
+    grid-template-columns: 55px 1fr;
+    grid-template-areas: "header header" "nav main";
   }
 
-  .centered {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+  main {
+    display: grid;
+    grid-template-columns: 50%;
   }
 
-  .row {
-    flex-direction: row;
+  .traffic,
+.social {
+    grid-column: 1/span 2;
   }
 
-  [class^=col] {
-    display: flex;
-    justify-content: center;
-    margin-top: 0;
-    align-items: center;
+  .daily,
+.members,
+.message {
+    grid-column: 1/span 1;
   }
 
-  [class^=col] + [class^=col] {
-    margin-left: 10px;
+  .pie,
+.activity,
+.settings {
+    grid-column: 2/span 1;
   }
 
-  .col-1 {
-    flex-basis: 8.33%;
+  .widget-container-full {
+    width: 90vw;
   }
 
-  .col-2 {
-    flex-basis: 16.67%;
-  }
-
-  .col-3 {
-    flex-basis: 25%;
-  }
-
-  .col-4 {
-    flex-basis: 33.33%;
-  }
-
-  .col-5 {
-    flex-basis: 41.67%;
-  }
-
-  .col-6 {
-    flex-basis: 50%;
-  }
-
-  .col-7 {
-    flex-basis: 58.33%;
-  }
-
-  .col-8 {
-    flex-basis: 66.67%;
-  }
-
-  .col-9 {
-    flex-basis: 75%;
-  }
-
-  .col-10 {
-    flex-basis: 83.33%;
-  }
-
-  .col-11 {
-    flex-basis: 91.67%;
-  }
-
-  .col-12 {
-    flex-basis: 100%;
-  }
-
-  .nav {
-    flex-direction: row;
-    justify-content: flex-end;
-    align-items: center;
-  }
-
-  .nav-link {
-    flex-basis: 100px;
-  }
-
-  .btn {
-    padding: 10px 30px;
-  }
-
-  .btn + .btn {
-    margin-left: 10px;
-  }
-
-  .logo {
-    margin-left: initial;
-    margin-right: initial;
+  .widget-container-half {
+    width: 45vw;
   }
 }
 
