@@ -119,3 +119,24 @@ let mobileChart = new Chart(mobileCanvas, {
     data: mobileData, 
     options: mobileOptions
 });
+
+/* ====================
+Messaging widget
+==================== */
+
+const user = document.getElementById('userField');
+const message = document.getElementById('messageField');
+const send = document.getElementById('send');
+
+// Adds a click handler for the send button
+send.addEventListener('click', () => {
+    if (user.value === "" && message.value === "") {
+        alert("Please fill in the user and message fields before sending");
+    } else if (user.value === "") {
+        alert("Please fill out the user field before sending");
+    } else if (message.value === "") {
+        alert("Please fill out the message field before sending");
+    } else {
+        alert(`Your message has been successfully sent to: ${user.value}`);
+    }
+});
