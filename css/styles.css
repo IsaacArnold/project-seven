@@ -391,6 +391,10 @@ a {
   border-radius: 5px;
 }
 
+.header {
+  background-color: lightgreen;
+}
+
 /* ============================================= */
 /*        Grid Layout - Mobile first: 320px      */
 /* ============================================= */
@@ -401,15 +405,15 @@ a {
   grid-template-areas: "header" "nav" "main";
 }
 
-header {
+.header {
   grid-area: "header";
 }
 
-nav {
+.nav {
   grid-area: "nav";
 }
 
-main {
+.main {
   grid-area: "main";
 }
 
