@@ -56,3 +56,66 @@ let trafficChart = new Chart(trafficCanvas, {
     data: trafficData, 
     options: trafficOptions
 });
+
+// Creates outline for the bar graph
+const dailyCanvas = document.getElementById('daily-chart');
+let dailyData = {
+    labels: ['S', 'M', 'T', 'W', 'T', 'F', 'S'],
+    datasets: [{
+        label: '# of Hits',
+        data: [75, 115, 175, 125, 225, 200, 100],
+        backgroundColor: '#7477bf',
+        borderWidth: 1,
+    }]
+};
+// Lets you set the chart options
+let dailyOptions = {
+    scales: {
+        yAxes: [{
+            ticks: {
+                beginAtZero: true
+            }
+        }]
+    },
+    legend: {
+        display: false
+    }
+};
+// Creates the chart itself
+let dailyChart = new Chart(dailyCanvas, {
+    type: 'bar',
+    data: dailyData, 
+    options: dailyOptions
+});
+
+// Creates outline for the pie chart
+const mobileCanvas = document.getElementById('pie-chart');
+let mobileData = {
+    labels: ['Desktop', 'Tablet', 'Phones'],
+    datasets: [{
+        label: '# of Users',
+        data: [2000, 550, 500],
+        backgroundColor: [
+            '#7477bf',
+            '#78CF82',
+            '#51b6c8'
+        ],
+        borderWidth: 0,
+    }]
+};
+// Lets you set the chart options
+let mobileOptions = {
+    legend: {
+        position: 'right',
+        labels: {
+            boxWidth: 20,
+            fontStyle: 'bold'
+        }
+    }
+};
+// Creates the chart itself
+let mobileChart = new Chart(mobileCanvas, {
+    type: 'doughnut',
+    data: mobileData, 
+    options: mobileOptions
+});
