@@ -391,6 +391,9 @@ a {
   border-radius: 5px;
 }
 
+/* ============================================= */
+/*                Header Layout                  */
+/* ============================================= */
 .header {
   display: flex;
   width: 100%;
@@ -398,6 +401,7 @@ a {
   align-items: center;
   justify-content: space-between;
   background-color: lightgreen;
+  padding: 5px;
 }
 
 .bell-container {
@@ -418,9 +422,40 @@ h1 {
 
 h3 {
   font-size: 1em;
-  margin-left: 5px;
+  margin-left: 2px;
   margin-right: 5px;
+}
+
+.separator {
+  height: 30px;
   border-left: solid 1px lightslategrey;
+  margin-right: 3px;
+}
+
+.profile-image {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  margin: 0 5px;
+}
+
+/* ============================================= */
+/*                Navigation Layout              */
+/* ============================================= */
+.nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: 50px;
+  margin: auto;
+  background-color: tomato;
+}
+
+.nav-icons {
+  height: 30px;
+  width: 30px;
+  margin: auto;
 }
 
 /* ============================================= */
