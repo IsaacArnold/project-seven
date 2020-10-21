@@ -392,7 +392,35 @@ a {
 }
 
 .header {
+  display: flex;
+  width: 100%;
+  margin: auto;
+  align-items: center;
+  justify-content: space-between;
   background-color: lightgreen;
+}
+
+.bell-container {
+  display: flex;
+}
+
+.icon-bell {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+
+h1 {
+  margin-right: auto;
+  margin-left: 5px;
+  font-size: 1.25em;
+}
+
+h3 {
+  font-size: 1em;
+  margin-left: 5px;
+  margin-right: 5px;
+  border-left: solid 1px lightslategrey;
 }
 
 /* ============================================= */
@@ -406,15 +434,15 @@ a {
 }
 
 .header {
-  grid-area: "header";
+  grid-area: header;
 }
 
 .nav {
-  grid-area: "nav";
+  grid-area: nav;
 }
 
 .main {
-  grid-area: "main";
+  grid-area: main;
 }
 
 .widget-container-full,

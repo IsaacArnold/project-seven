@@ -1,20 +1,20 @@
 /* ====================
 Alert bar script
 ==================== */
-const alert = document.getElementById('alert');
+const alertBar = document.getElementById('alert');
 
 // Inserts content into DOM
-alert.innerHTML = 
+alertBar.innerHTML = 
 `<div class="alert-banner">
     <p><strong>Alert:</strong> You have <strong>6</strong> overdue tasks to complete</p>
     <p class="alert-banner-close">x</p>
 </div>`
 
 // Adds an event handler to the close button
-alert.addEventListener('click', (e) => {
+alertBar.addEventListener('click', (e) => {
     const element = e.target;
     if (element.classList.contains('alert-banner-close')) {
-        alert.style.display = 'none';
+        alertBar.style.display = 'none';
     }
 });
 
@@ -129,7 +129,8 @@ const message = document.getElementById('messageField');
 const send = document.getElementById('send');
 
 // Adds a click handler for the send button
-send.addEventListener('click', () => {
+send.addEventListener('click', (event) => {
+    event.preventDefault();
     if (user.value === "" && message.value === "") {
         alert("Please fill in the user and message fields before sending");
     } else if (user.value === "") {
