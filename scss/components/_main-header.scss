@@ -1,0 +1,35 @@
+/* ============================================= */
+/*                Main-Header                    */
+/* ============================================= */
+
+.main-header {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: 
+    'dashboard search';
+    align-items: center;
+    h2 {
+        font-size: 1.1em;
+    }
+}
+
+.headline {
+    grid-area: dashboard;
+}
+.main-header-search {
+    grid-area: search;
+    justify-self: end;
+    background-color: whitesmoke;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    border-left: solid 1px lightgray;
+    border-bottom: solid 1px lightgray;
+    input[type='search'] {
+        margin-left: auto;
+        width: 75%;
+        height: 50%;
+        align-self: center;
+    }
+}
