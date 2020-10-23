@@ -506,6 +506,31 @@ h3 {
 }
 
 /* ============================================= */
+/*                Traffic Chart                  */
+/* ============================================= */
+.traffic-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.traffic-nav {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+}
+.traffic-nav .traffic-nav-link {
+  margin-right: 10px;
+  font-size: 0.75em;
+}
+
+.active {
+  background-color: limegreen;
+  border-radius: 10px;
+  padding: 0 10px;
+}
+
+/* ============================================= */
 /*        Grid Layout - Mobile first: 320px      */
 /* ============================================= */
 .grid-container {
