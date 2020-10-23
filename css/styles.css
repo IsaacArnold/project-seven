@@ -545,11 +545,25 @@ h3 {
   justify-content: space-around;
   align-items: center;
   background-color: whitesmoke;
+  margin: 10px;
+  border: solid 1px lightgray;
+  border-radius: 4px;
 }
 
 .social-image {
   background-color: dodgerblue;
   border-radius: 50%;
+  margin: 0 10px;
+}
+
+svg {
+  width: 30px;
+  height: 30px;
+  padding: px;
+}
+
+.social-text p {
+  font-size: 0.75em;
 }
 
 /* ============================================= */
