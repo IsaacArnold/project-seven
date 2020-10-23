@@ -493,6 +493,19 @@ h3 {
 }
 
 /* ============================================= */
+/*                Alert Bar Layout               */
+/* ============================================= */
+.alert-banner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: dodgerblue;
+}
+.alert-banner p {
+  margin: 5px;
+}
+
+/* ============================================= */
 /*        Grid Layout - Mobile first: 320px      */
 /* ============================================= */
 .grid-container {
