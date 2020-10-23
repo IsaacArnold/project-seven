@@ -8,5 +8,13 @@
 }
 
 .social-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
     background-color: whitesmoke;
+}
+
+.social-image {
+    background-color: dodgerblue;
+    border-radius: 50%;
 }
