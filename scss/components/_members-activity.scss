@@ -1,8 +1,9 @@
 /* ============================================= */
-/*                New Members Section            */
+/*     New Members & Recent Activity Sections    */
 /* ============================================= */
 
-.members-container {
+.members-container,
+.activity-container {
     display: flex;
     align-items: center;
     border-bottom: solid 1px lightgray;
@@ -12,8 +13,6 @@
 }
 
 .members-text {
-    display: flex;
-    flex-direction: column;
     p {
         font-size: .9em;
         margin-bottom: 0;
@@ -25,7 +24,28 @@
     }
 }
 
-.date {
+.activity-text {
+    display: flex;
+    flex-direction: column;
+    p:first-child{
+        font-size: .9em;
+        margin-bottom: 0;
+        margin-top: 0;
+    }
+}
+
+.activity-text {
+    margin: 5px 20px 5px 0;
+}
+
+.activity-time {
+    font-size: .75em;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+.date,
+.arrow {
     margin-left: auto;
     font-size: .9em;
 }

@@ -567,21 +567,19 @@ svg {
 }
 
 /* ============================================= */
-/*                New Members Section            */
+/*     New Members & Recent Activity Sections    */
 /* ============================================= */
-.members-container {
+.members-container,
+.activity-container {
   display: flex;
   align-items: center;
   border-bottom: solid 1px lightgray;
 }
-.members-container .profile-image {
+.members-container .profile-image,
+.activity-container .profile-image {
   margin-right: 10px;
 }
 
-.members-text {
-  display: flex;
-  flex-direction: column;
-}
 .members-text p {
   font-size: 0.9em;
   margin-bottom: 0;
@@ -592,7 +590,28 @@ svg {
   color: paleturquoise;
 }
 
-.date {
+.activity-text {
+  display: flex;
+  flex-direction: column;
+}
+.activity-text p:first-child {
+  font-size: 0.9em;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.activity-text {
+  margin: 5px 20px 5px 0;
+}
+
+.activity-time {
+  font-size: 0.75em;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.date,
+.arrow {
   margin-left: auto;
   font-size: 0.9em;
 }
