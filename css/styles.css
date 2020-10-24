@@ -367,7 +367,7 @@ a {
 /*              Typography                       */
 /* ============================================= */
 .headline-primary {
-  color: #58e1c1;
+  color: #7477bf;
   margin-left: 10px;
 }
 
@@ -377,7 +377,7 @@ a {
 }
 
 .link {
-  color: #51ddfc;
+  color: #78cf82;
   font-weight: 700;
 }
 
@@ -387,7 +387,7 @@ a {
   font-style: italic;
   margin-left: 20px;
   padding-left: 20px;
-  border-left: 8px solid #58e1c1;
+  border-left: 8px solid #7477bf;
   border-radius: 5px;
 }
 
@@ -400,8 +400,14 @@ a {
   margin: auto;
   align-items: center;
   justify-content: space-between;
-  background-color: lightgreen;
+  background-color: #7477bf;
   padding: 5px;
+}
+.header h3 {
+  font-size: 1em;
+  margin-left: 2px;
+  margin-right: 5px;
+  color: #fff;
 }
 
 .bell-container {
@@ -418,17 +424,12 @@ h1 {
   margin-right: auto;
   margin-left: 5px;
   font-size: 1.25em;
-}
-
-h3 {
-  font-size: 1em;
-  margin-left: 2px;
-  margin-right: 5px;
+  color: #fff;
 }
 
 .separator {
   height: 30px;
-  border-left: solid 1px lightslategrey;
+  border-left: solid 1px lightgray;
   margin-right: 3px;
 }
 
@@ -448,7 +449,7 @@ h3 {
   align-items: center;
   width: 100%;
   margin: auto;
-  background-color: tomato;
+  background-color: #7477bf;
 }
 
 .nav-icons {
@@ -499,11 +500,11 @@ h3 {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: dodgerblue;
+  background-color: #7477bf;
 }
 .alert-banner p {
   margin: 5px;
-  color: white;
+  color: #fff;
 }
 
 /* ============================================= */
@@ -527,8 +528,8 @@ h3 {
 }
 
 .active {
-  background-color: limegreen;
-  color: white;
+  background-color: #78cf82;
+  color: #fff;
   border-radius: 10px;
 }
 
@@ -551,7 +552,7 @@ h3 {
 }
 
 .social-image {
-  background-color: dodgerblue;
+  background-color: #7477bf;
   border-radius: 50%;
   margin: 0 10px;
 }
@@ -573,7 +574,7 @@ svg {
 .activity-container {
   display: flex;
   align-items: center;
-  border-bottom: solid 1px lightgray;
+  border-bottom: solid 1px #d3d3d3;
 }
 .members-container .profile-image,
 .activity-container .profile-image {
@@ -587,7 +588,7 @@ svg {
 }
 .members-text a {
   font-size: 0.75em;
-  color: paleturquoise;
+  color: #7477bf;
 }
 
 .activity-text {
@@ -628,14 +629,46 @@ textarea[id=messageField] {
 button[id=send] {
   width: 100%;
   padding: 5px 0;
-  background-color: dodgerblue;
-  color: white;
+  background-color: #7477bf;
+  color: #fff;
   border: none;
   border-radius: 4px;
 }
 
-/* iOS Theme
-*/
+/* ============================================= */
+/*                Timezone & Button styles       */
+/* ============================================= */
+select[id=timezone] {
+  width: 100%;
+}
+
+.settings-button {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+button[id=save] {
+  background-color: #7477bf;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 5px 0;
+}
+
+button[id=cancel] {
+  background-color: lightgray;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 5px 0;
+}
+
+/* ============================================= */
+/*                iOs Theme                      */
+/* ============================================= */
 .switch-ios.switch-light {
   display: flex;
   justify-content: space-between;
@@ -683,12 +716,12 @@ button[id=send] {
 }
 .switch-ios.switch-light input:checked ~ span a {
   left: 100%;
-  border-color: #2b3f81;
+  border-color: #7477bf;
   margin-left: size(-32);
 }
 .switch-ios.switch-light input:checked ~ span {
-  border-color: #2b3f81;
-  box-shadow: inset 0 0 0 30px #2b3f81;
+  border-color: #7477bf;
+  box-shadow: inset 0 0 0 30px #7477bf;
 }
 .switch-ios.switch-light input:checked ~ span span:first-of-type {
   opacity: 0;
@@ -703,7 +736,7 @@ button[id=send] {
   box-shadow: inset rgba(0, 0, 0, 0.1) 0 1px 0;
 }
 .switch-ios.switch-toggle a {
-  background-color: #2b3f81;
+  background-color: #7477bf;
   border: size(2) solid #D8D9DB;
   border-radius: size(28);
   transition: all 0.12s ease-out;

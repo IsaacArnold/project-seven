@@ -21,7 +21,7 @@
 }
 
 .active {
-    background-color: limegreen;
-    color: white;
+    background-color: $brand-color-secondary;
+    color: $white-txt;
     border-radius: 10px;
 }

@@ -7,8 +7,14 @@
     margin: auto;
     align-items: center;
     justify-content: space-between;
-    background-color: lightgreen;
+    background-color: $brand-color-primary;
     padding: 5px;
+    h3 {
+        font-size: 1em;
+        margin-left: 2px;
+        margin-right: 5px;
+        color: $white-txt;
+    }
 }
 
 .bell-container {
@@ -25,17 +31,12 @@ h1 {
     margin-right: auto;
     margin-left: 5px;
     font-size: 1.25em;
-}
-
-h3 {
-    font-size: 1em;
-    margin-left: 2px;
-    margin-right: 5px;
+    color: $white-txt;
 }
 
 .separator {
     height: 30px;
-    border-left: solid 1px lightslategrey;
+    border-left: solid 1px lightgray;
     margin-right: 3px;
 }
 

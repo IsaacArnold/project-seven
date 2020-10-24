@@ -1,7 +1,40 @@
-/* iOS Theme
-*/
+/* ============================================= */
+/*                Timezone & Button styles       */
+/* ============================================= */
+
+select[id='timezone'] {
+  width: 100%;
+}
+
+.settings-button {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+button[id='save'] {
+  background-color: $brand-color-primary;
+  color: $white-txt;
+  border: none;
+  border-radius: 4px;
+  padding: 5px 0;
+}
+
+button[id='cancel'] {
+  background-color: lightgray;
+  color: $white-txt;
+  border: none;
+  border-radius: 4px;
+  padding: 5px 0;
+}
+
+/* ============================================= */
+/*                iOs Theme                      */
+/* ============================================= */
 .switch-ios {
-  $toggle-active-color: #2b3f81;
+  $toggle-active-color: $brand-color-primary;
 
   &.switch-light {
     display: flex;
@@ -17,7 +50,7 @@
       top: 0;
       width: size(32);
       height: size(32);
-      background-color: #fff;
+      background-color: $white-txt;
       border-radius: 100%;
       border: size(4) solid #D8D9DB;
 
