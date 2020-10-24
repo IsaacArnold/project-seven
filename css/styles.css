@@ -635,6 +635,19 @@ button[id=send] {
 }
 
 /* ============================================= */
+/*                Settings  Widget               */
+/* ============================================= */
+.switch-light,
+.switch-ios {
+  display: flex;
+  justify-content: space-between;
+}
+
+.switch-ios span {
+  width: 50%;
+}
+
+/* ============================================= */
 /*        Grid Layout - Mobile first: 320px      */
 /* ============================================= */
 .grid-container {
