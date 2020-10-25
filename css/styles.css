@@ -458,7 +458,17 @@ h1 {
   width: 30px;
   margin: 10px 0;
 }
+.nav-icons:first-child {
+  margin-top: 20px;
+}
 
+@media (min-width: 768px) {
+  .nav {
+    flex-direction: column;
+    height: 100%;
+    justify-content: flex-start;
+  }
+}
 /* ============================================= */
 /*                Main-Header                    */
 /* ============================================= */
@@ -841,9 +851,9 @@ button[id=cancel] {
     grid-template-areas: "header header" "nav main";
   }
 
-  main {
+  .main {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: 50%;
   }
 
   .traffic,
