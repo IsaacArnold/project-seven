@@ -34,10 +34,21 @@ svg {
 }
 
 .social-text {
-    margin-left: auto;
-    margin-right: 10px;
-    text-align: right;
-    p {
+    margin-right: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: left;
+    p:first-child {
+        color: $brand-color-primary;
+        font-weight: bold;
+        margin-top: 0;
+        margin-bottom: 0;
         font-size: .75em;
+    }
+    p:last-child {
+        font-size: 1.7em;
+        margin-top: 0;
+        margin-bottom: 0;
+        font-weight: lighter;
     }
 }
