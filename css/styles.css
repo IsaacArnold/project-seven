@@ -478,7 +478,6 @@ h1 {
 
 .main-header-content {
   display: grid;
-  width: 95%;
   margin: auto;
   grid-template-columns: 1fr 2fr;
   grid-template-rows: 1fr;
@@ -509,6 +508,11 @@ h1 {
   align-self: center;
 }
 
+@media (min-width: 768px) {
+  .main-header {
+    width: 100%;
+  }
+}
 /* ============================================= */
 /*                Alert Bar Layout               */
 /* ============================================= */
@@ -553,7 +557,7 @@ h1 {
   padding: 5px 10px;
 }
 .traffic-nav .traffic-nav-link:last-child {
-  padding-right: 0px;
+  padding-right: 10px;
 }
 
 .active {
@@ -562,7 +566,8 @@ h1 {
   border-radius: 10px;
 }
 
-.widget-container-full {
+.widget-container-full,
+.widget-container-half {
   margin: auto;
 }
 

@@ -7,7 +7,7 @@
 }
 .main-header-content {
     display: grid;
-    width: 95%;
+    // width: 95%;
     margin: auto;
     grid-template-columns: 1fr 2fr;
     grid-template-rows: 1fr;
@@ -35,5 +35,11 @@
         width: 75%;
         height: 50%;
         align-self: center;
+    }
+}
+
+@media (min-width: 768px) {
+    .main-header {
+        width: 100%;
     }
 }

@@ -20,7 +20,7 @@
         font-size: .75em;
         padding: 5px 10px;
         &:last-child {
-            padding-right: 0px;
+            padding-right: 10px;
         }
     } 
     
@@ -32,7 +32,8 @@
     border-radius: 10px;
 }
 
-.widget-container-full {
+.widget-container-full,
+.widget-container-half {
     margin: auto;
 }
 
@@ -45,4 +46,8 @@
 .settings {
     width: 95%;
     margin: auto;
+}
+
+@media (min-width: 768px) {
+
 }
