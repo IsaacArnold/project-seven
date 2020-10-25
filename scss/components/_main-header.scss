@@ -3,19 +3,23 @@
 /* ============================================= */
 
 .main-header {
+    background-color: whitesm;
+}
+.main-header-content {
     display: grid;
+    width: 95%;
+    margin: auto;
     grid-template-columns: 1fr 2fr;
     grid-template-rows: 1fr;
     grid-template-areas: 
     'dashboard search';
     align-items: center;
-    h2 {
-        font-size: 1.1em;
-    }
+    margin-bottom: 10px;
 }
 
 .headline {
     grid-area: dashboard;
+    font-size: 1.1em;
 }
 .main-header-search {
     grid-area: search;

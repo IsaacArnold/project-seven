@@ -395,18 +395,20 @@ a {
 /*                Header Layout                  */
 /* ============================================= */
 .header {
-  display: flex;
   width: 100%;
+  background-color: #5964a7ec;
+}
+
+.header-content-wrapper {
+  display: flex;
+  width: 95%;
   margin: auto;
   align-items: center;
   justify-content: space-between;
-  background-color: #5964a7ec;
-  padding: 5px;
 }
-.header h3 {
+.header-content-wrapper h3 {
   font-size: 1em;
   margin-left: 2px;
-  margin-right: 5px;
   color: #fff;
 }
 
@@ -422,7 +424,6 @@ a {
 
 h1 {
   margin-right: auto;
-  margin-left: 5px;
   font-size: 1.25em;
   color: #fff;
 }
@@ -462,18 +463,23 @@ h1 {
 /*                Main-Header                    */
 /* ============================================= */
 .main-header {
+  background-color: whitesm;
+}
+
+.main-header-content {
   display: grid;
+  width: 95%;
+  margin: auto;
   grid-template-columns: 1fr 2fr;
   grid-template-rows: 1fr;
   grid-template-areas: "dashboard search";
   align-items: center;
-}
-.main-header h2 {
-  font-size: 1.1em;
+  margin-bottom: 10px;
 }
 
 .headline {
   grid-area: dashboard;
+  font-size: 1.1em;
 }
 
 .main-header-search {
@@ -497,13 +503,21 @@ h1 {
 /*                Alert Bar Layout               */
 /* ============================================= */
 .alert-banner {
+  background-color: #7477bf;
+  width: 95%;
+  margin: auto;
+  border-radius: 4px;
+}
+
+.alert-banner-content {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #7477bf;
+  width: 95%;
+  margin: auto;
 }
-.alert-banner p {
-  margin: 5px;
+.alert-banner-content p {
+  margin: 5px 0;
   color: #fff;
 }
 
@@ -514,6 +528,8 @@ h1 {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 95%;
+  margin: auto;
 }
 
 .traffic-nav {
@@ -526,11 +542,29 @@ h1 {
   font-size: 0.75em;
   padding: 5px 10px;
 }
+.traffic-nav .traffic-nav-link:last-child {
+  padding-right: 0px;
+}
 
 .active {
   background-color: #78cf82;
   color: #fff;
   border-radius: 10px;
+}
+
+.widget-container-full {
+  margin: auto;
+}
+
+.daily,
+.pie,
+.social,
+.members,
+.activity,
+.message,
+.settings {
+  width: 95%;
+  margin: auto;
 }
 
 /* ============================================= */

@@ -6,8 +6,10 @@ const alertBar = document.getElementById('alert');
 // Inserts content into DOM
 alertBar.innerHTML = 
 `<div class="alert-banner">
-    <p><strong>Alert:</strong> You have <strong>6</strong> overdue tasks to complete</p>
-    <p class="alert-banner-close">x</p>
+    <div class="alert-banner-content">
+        <p><strong>Alert:</strong> You have <strong>6</strong> overdue tasks to complete</p>
+        <p class="alert-banner-close">x</p>
+    </div>
 </div>`
 
 // Adds an event handler to the close button

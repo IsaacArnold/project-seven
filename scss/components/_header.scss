@@ -2,17 +2,19 @@
 /*                Header Layout                  */
 /* ============================================= */
 .header {
-    display: flex;
     width: 100%;
+    background-color: $header-color;
+}
+
+.header-content-wrapper {
+    display: flex;
+    width: 95%;
     margin: auto;
     align-items: center;
     justify-content: space-between;
-    background-color: $header-color;
-    padding: 5px;
     h3 {
         font-size: 1em;
         margin-left: 2px;
-        margin-right: 5px;
         color: $white-txt;
     }
 }
@@ -29,7 +31,6 @@
 
 h1 {
     margin-right: auto;
-    margin-left: 5px;
     font-size: 1.25em;
     color: $white-txt;
 }

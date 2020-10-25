@@ -6,17 +6,23 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 95%;
+    margin: auto;
 }
 
 .traffic-nav {
     list-style: none;
     display: flex;
     flex-direction: row;
+    // margin-right: 30px;
     .traffic-nav-link {
         display: block;
         font-size: .75em;
         padding: 5px 10px;
-    }
+        &:last-child {
+            padding-right: 0px;
+        }
+    } 
     
 }
 
@@ -24,4 +30,19 @@
     background-color: $active-link-color;
     color: $white-txt;
     border-radius: 10px;
+}
+
+.widget-container-full {
+    margin: auto;
+}
+
+.daily,
+.pie,
+.social,
+.members,
+.activity,
+.message,
+.settings {
+    width: 95%;
+    margin: auto;
 }

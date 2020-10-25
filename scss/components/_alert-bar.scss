@@ -3,12 +3,19 @@
 /* ============================================= */
 
 .alert-banner {
+    background-color: $brand-color-primary;
+    width: 95%;
+    margin: auto;
+    border-radius: 4px;
+}
+.alert-banner-content {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: $brand-color-primary;
+    width: 95%;
+    margin: auto;
     p {
-        margin: 5px;
+        margin: 5px 0;
         color: $white-txt;
     }
 }
