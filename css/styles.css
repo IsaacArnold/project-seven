@@ -539,10 +539,12 @@ h1 {
 .social-container-wrapper {
   display: flex;
   justify-content: space-around;
+  flex-wrap: wrap;
 }
 
 .social-container {
   display: flex;
+  flex-basis: 200px;
   justify-content: space-around;
   align-items: center;
   background-color: whitesmoke;
@@ -565,6 +567,11 @@ svg {
   height: auto;
 }
 
+.social-text {
+  margin-left: auto;
+  margin-right: 10px;
+  text-align: right;
+}
 .social-text p {
   font-size: 0.75em;
 }

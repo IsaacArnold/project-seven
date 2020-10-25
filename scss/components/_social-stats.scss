@@ -5,11 +5,12 @@
 .social-container-wrapper {
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;
 }
 
 .social-container {
     display: flex;
-    // flex-wrap: wrap;
+    flex-basis: 200px;
     justify-content: space-around;
     align-items: center;
     background-color: whitesmoke;
@@ -33,6 +34,9 @@ svg {
 }
 
 .social-text {
+    margin-left: auto;
+    margin-right: 10px;
+    text-align: right;
     p {
         font-size: .75em;
     }
