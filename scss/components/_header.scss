@@ -21,12 +21,23 @@
 
 .bell-container {
     display: flex;
+    position: relative;
 }
 
 .icon-bell {
     width: 20px;
     height: 20px;
     margin-right: 10px;
+}
+
+.notification {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: $active-link-color;
+    position: absolute;
+    left: 15px;
+    top: -3px;
 }
 
 h1 {
