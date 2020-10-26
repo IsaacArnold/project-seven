@@ -747,6 +747,7 @@ select[id=timezone] {
   grid-template-rows: 1fr;
   gap: 15px;
   margin-top: 10px;
+  margin-bottom: 40px;
 }
 
 button[id=save] {
@@ -963,6 +964,10 @@ button[id=cancel] {
 
   .settings {
     margin-top: 0;
+  }
+
+  .settings-button {
+    margin-bottom: 0;
   }
 
   select[id=timezone] {
