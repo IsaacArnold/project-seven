@@ -20,6 +20,8 @@
 .headline {
     grid-area: dashboard;
     font-size: 1.1em;
+    padding-left: 8px;
+    padding-right: 8px;
 }
 .main-header-search {
     grid-area: search;
@@ -30,6 +32,7 @@
     display: flex;
     border-left: solid 1px lightgray;
     border-bottom: solid 1px lightgray;
+    padding-right: 8px;
     input[type='search'] {
         margin-left: auto;
         width: 75%;
