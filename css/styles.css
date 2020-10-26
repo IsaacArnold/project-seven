@@ -100,7 +100,6 @@ abbr[title] {
 b,
 strong {
   font-weight: bolder;
-  color: white;
 }
 
 /**
@@ -546,6 +545,9 @@ h1 {
 .alert-banner-content p {
   margin: 5px 0;
   color: #fff;
+}
+.alert-banner-content p strong {
+  color: white;
 }
 
 /* ============================================= */
