@@ -32,21 +32,20 @@
     border-radius: 10px;
 }
 
-.widget-container-full,
-.widget-container-half {
+.widget-container-full {
     margin: auto;
 }
 
-.daily,
-.pie,
-.social,
-.members,
-.activity,
-.message,
-.settings {
-    width: 95%;
-    margin: auto;
-}
+// .daily,
+// .pie,
+// .social,
+// .members,
+// .activity,
+// .message,
+// .settings {
+//     width: 95%;
+//     margin: auto;
+// }
 
 @media (min-width: 768px) {
 

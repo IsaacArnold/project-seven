@@ -41,5 +41,14 @@
 @media (min-width: 768px) {
     .main-header {
         width: 100%;
+        grid-column: 1 / span 2;
+    }
+
+    .headline {
+        padding-left: 15px;
+    }
+
+    input[type='search'] {
+        margin-right: 15px;
     }
 }

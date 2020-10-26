@@ -7,6 +7,10 @@
     display: flex;
     align-items: center;
     border-bottom: solid 1px $border-color;
+    height: 68px;
+    &:last-child {
+        border: none;
+    }
     .profile-image {
         margin-right: 10px;
     }

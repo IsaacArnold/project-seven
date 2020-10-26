@@ -11,7 +11,41 @@
 
   .main {
     display: grid;
-    grid-template-columns: 50%;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .traffic-header {
+    width: 100%;
+  }
+
+  .container {
+    padding: 0 15px;
+    width: 100%;
+    grid-column: 1 / span 2;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    margin-bottom: 40px;
+  }
+
+  .alert {
+    grid-column: 1 / span 2;
+  }
+
+  .alert-banner {
+    width: 100%;
+  }
+
+  .daily,
+  .pie {
+    width: 100%;
+  }
+
+  .pie h3 {
+    margin-left: 17px;
+  }
+
+  .daily {
+    margin-top: 0;
   }
 
   .traffic,
@@ -19,16 +53,29 @@
     grid-column: 1 / span 2;
   }
 
-  .daily,
+  .social {
+    width: 100%;
+  }
+
   .members,
   .message {
     grid-column: 1 / span 1;
+    margin-top: 0;
+    margin-left: 0;
   }
 
-  .pie,
   .activity,
   .settings {
     grid-column: 2 / span 1;
+    margin-right: 0;
+  }
+
+  .settings {
+    margin-top: 0;
+  }
+
+  select[id='timezone'] {
+    margin-top: 18px;
   }
 
   .widget-container-full {
@@ -37,5 +84,48 @@
 
   .widget-container-half {
     width: 45vw;
+  }
+}
+
+
+@media (min-width: 1024px) {
+  .daily,
+  .pie {
+    margin-top: 30px;
+    padding-bottom: 30px;
+    border-top: solid 1px $border-color;
+    border-bottom: solid 1px $border-color;
+  }
+
+  .daily {
+    border-right: solid 1px $border-color;
+  }
+
+  .social {
+    border-bottom: solid 1px $border-color;
+    padding-bottom: 30px;
+    h3 {
+      margin-top: 30px;
+    }
+  }
+
+  canvas[id='daily-chart'] {
+    padding-right: 10px;
+  }
+
+  .members,
+  .message {
+    border-right: solid 1px $border-color;
+    padding-right: 20px;
+  }
+
+  .activity,
+  .settings {
+    padding-left: 20px;
+  }
+
+  .message,
+  .settings {
+    border-top: solid 1px $border-color;
   }
 }
