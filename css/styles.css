@@ -563,10 +563,10 @@ h1 {
 .traffic-nav .traffic-nav-link {
   display: block;
   font-size: 0.75em;
-  padding: 5px 10px;
+  padding: 5px 5px;
 }
 .traffic-nav .traffic-nav-link:last-child {
-  padding-right: 10px;
+  margin-right: 5px;
 }
 
 .active {
@@ -636,6 +636,17 @@ svg {
 /* ============================================= */
 /*     New Members & Recent Activity Sections    */
 /* ============================================= */
+.members,
+.activity,
+.daily,
+.pie,
+.social,
+.message,
+.settings {
+  width: 95%;
+  margin: auto;
+}
+
 .members-container,
 .activity-container {
   display: flex;
@@ -902,6 +913,10 @@ button[id=cancel] {
     grid-column: 1/span 2;
   }
 
+  .traffic {
+    margin-bottom: 19px;
+  }
+
   .social {
     width: 100%;
   }
@@ -911,6 +926,16 @@ button[id=cancel] {
     grid-column: 1/span 1;
     margin-top: 0;
     margin-left: 0;
+  }
+
+  .members,
+.message {
+    padding-right: 20px;
+  }
+
+  .activity,
+.settings {
+    padding-left: 20px;
   }
 
   .activity,

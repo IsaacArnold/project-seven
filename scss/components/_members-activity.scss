@@ -2,6 +2,17 @@
 /*     New Members & Recent Activity Sections    */
 /* ============================================= */
 
+.members,
+.activity,
+.daily,
+.pie,
+.social,
+.message,
+.settings {
+    width: 95%;
+    margin: auto;
+}
+
 .members-container,
 .activity-container {
     display: flex;

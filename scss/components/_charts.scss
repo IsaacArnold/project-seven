@@ -18,9 +18,9 @@
     .traffic-nav-link {
         display: block;
         font-size: .75em;
-        padding: 5px 10px;
+        padding: 5px 5px;
         &:last-child {
-            padding-right: 10px;
+            margin-right: 5px;
         }
     } 
     
@@ -35,17 +35,6 @@
 .widget-container-full {
     margin: auto;
 }
-
-// .daily,
-// .pie,
-// .social,
-// .members,
-// .activity,
-// .message,
-// .settings {
-//     width: 95%;
-//     margin: auto;
-// }
 
 @media (min-width: 768px) {
 
