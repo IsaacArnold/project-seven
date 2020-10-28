@@ -143,3 +143,50 @@ send.addEventListener('click', (event) => {
         alert(`Your message has been successfully sent to: ${user.value}`);
     }
 });
+
+/* ====================
+Local Storage for Settings widget
+==================== */
+const email = document.getElementById('email');
+const profile = document.getElementById('profile');
+const saveButton = document.getElementById('save');
+const cancelButton = document.getElementById('cancel');
+
+function testStorage() {
+    const test = 'test';
+    try {
+        localStorage.setItem(test, test);
+        localStorage.removeItem(test);
+        return true;
+    } catch(e) {
+        return false;
+    }
+}
+
+if (testStorage() === true) {}
+
+saveButton.addEventListener('click', () => {
+    localStorage.setItem('emailPref', email.checked);
+    localStorage.setItem('profilePref', profile.checked);
+    alert('Settings successfully saved!');
+});
+
+// Sets all settings back to deafult when cancel is pushed
+cancelButton.addEventListener('click', () => {
+    const cancel = confirm('Are you sure you want to cancel changes?');
+
+    if (cancel) {
+        localStorage.setItem('emailPref', email.checked = null);
+        localStorage.setItem('profilePref', profile.checked = null);
+    }
+});
+
+// Sets value of ID based on saved profile settings
+const loadSettings = function() {
+    if (emailPref !== null) {
+        email.checked = (emailPref === 'true');
+    }
+    if (profilePref !=== null) {
+        profile.checked = (emailPref === 'true');
+    }
+}

@@ -453,6 +453,27 @@ h1 {
 }
 
 /* ============================================= */
+/*                Bell Animation                 */
+/* ============================================= */
+@keyframes bell {
+  10% {
+    transform: rotate(-20deg);
+  }
+  20% {
+    transform: rotate(-40deg);
+  }
+  90% {
+    transform: rotate(30deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
+.icon-bell:hover {
+  animation: bell 1s ease-in-out;
+}
+
+/* ============================================= */
 /*                Navigation Layout              */
 /* ============================================= */
 .nav {
