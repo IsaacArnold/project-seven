@@ -904,7 +904,6 @@ button[id=cancel] {
   }
 
   .container {
-    padding: 0 15px;
     width: 100%;
     grid-column: 1/span 2;
     display: grid;
@@ -914,6 +913,7 @@ button[id=cancel] {
 
   .alert {
     grid-column: 1/span 2;
+    padding: 0 15px;
   }
 
   .alert-banner {
@@ -927,15 +927,18 @@ button[id=cancel] {
 
   .pie h3 {
     margin-left: 17px;
+    padding: 0 15px;
   }
 
   .daily {
     margin-top: 0;
+    padding: 0 15px;
   }
 
   .traffic,
 .social {
     grid-column: 1/span 2;
+    padding: 0 15px;
   }
 
   .traffic {
@@ -951,12 +954,14 @@ button[id=cancel] {
     grid-column: 1/span 1;
     margin-top: 0;
     margin-left: 0;
+    padding: 0 15px;
   }
 
   .activity,
 .settings {
     grid-column: 2/span 1;
     margin-right: 0;
+    padding: 0 15px;
   }
 
   .settings {
