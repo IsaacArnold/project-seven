@@ -66,6 +66,9 @@ button[id='cancel'] {
       border-radius: size(28);
       margin-left: auto;
       transition: all .4s ease-out;
+      @media (min-width: 1024px) {
+        width: 20%;
+      }
     }
 
     > span span {

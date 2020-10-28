@@ -797,6 +797,11 @@ button[id=cancel] {
   margin-left: auto;
   transition: all 0.4s ease-out;
 }
+@media (min-width: 1024px) {
+  .switch-ios.switch-light > span {
+    width: 20%;
+  }
+}
 .switch-ios.switch-light > span span {
   position: absolute;
   top: 0;
