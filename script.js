@@ -1,6 +1,6 @@
-/* ====================
+/* ========================================
 Alert bar script
-==================== */
+======================================== */
 const alertBar = document.getElementById('alert');
 
 // Inserts content into DOM
@@ -20,9 +20,46 @@ alertBar.addEventListener('click', (e) => {
     }
 });
 
-/* ====================
+/* ========================================
+Bell icon notifications
+======================================== */
+
+// Adds an event handler to the notification list
+const notificationUl = document.getElementById('notification-ul');
+const notificationItem = document.getElementsByClassName('close');
+const notificationIcon = document.getElementById('notification-icon');
+
+for (let i = 0; i < notificationItem.length; i++) {
+    notificationItem[i].addEventListener('click', (e) => {
+        if (e.target.tagName === 'P') {
+            e.target.parentNode.remove();
+            // Removes green notification dot
+            if (notificationUl.children.length < 1) {
+                notificationIcon.style.display = 'none';
+            }
+        }
+    });
+}
+
+// Function for hiding notifications on page load
+function hideNotifications() {
+    notificationUl.style.display = 'none'
+}
+document.addEventListener('DOMContentLoaded', hideNotifications());
+
+// Loads notifications once bell icon is clicked
+const bellIcon = document.querySelector('.icon-bell');
+
+bellIcon.addEventListener('click', () => {
+    if (notificationUl.style.display = 'none') {
+        notificationUl.style.display = 'block';
+    }
+});
+
+
+/* ========================================
 Chart widgets
-==================== */
+======================================== */
 
 // Creates outline for the line graph
 const trafficCanvas = document.getElementById('traffic-chart');
