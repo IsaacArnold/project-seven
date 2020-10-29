@@ -122,9 +122,9 @@ let mobileChart = new Chart(mobileCanvas, {
     options: mobileOptions
 });
 
-/* ====================
+/* ========================================
 Messaging widget
-==================== */
+======================================== */
 
 const user = document.getElementById('userField');
 const message = document.getElementById('messageField');
@@ -144,9 +144,9 @@ send.addEventListener('click', (event) => {
     }
 });
 
-/* ====================
+/* ========================================
 Local Storage for Settings widget
-==================== */
+======================================== */
 const email = document.getElementById('email');
 const profile = document.getElementById('profile');
 const saveButton = document.getElementById('save');
@@ -165,6 +165,7 @@ function testStorage() {
 
 if (testStorage() === true) {}
 
+// Saves settings to local storage when save button is clicked
 saveButton.addEventListener('click', () => {
     localStorage.setItem('emailPref', email.checked);
     localStorage.setItem('profilePref', profile.checked);
@@ -181,12 +182,19 @@ cancelButton.addEventListener('click', () => {
     }
 });
 
+// Runs function to load correct settings
+loadSettings();
+
 // Sets value of ID based on saved profile settings
 const loadSettings = function() {
     if (emailPref !== null) {
         email.checked = (emailPref === 'true');
     }
-    if (profilePref !=== null) {
+    if (profilePref !== null) {
         profile.checked = (emailPref === 'true');
     }
 }
+
+/* ========================================
+Local Storage for Settings widget
+======================================== */
