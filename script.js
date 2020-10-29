@@ -163,7 +163,23 @@ function testStorage() {
     }
 }
 
-if (testStorage() === true) {}
+
+
+// Create const for saved values
+const emailPref = localStorage.getItem('emailPref');
+const profilePref = localStorage.getItem('profilePref');
+
+// Sets value of ID based on saved profile settings
+const loadSettings = function() {
+    if (emailPref !== null) {
+        email.checked = (emailPref === 'true');
+    }
+    if (profilePref !== null) {
+        profile.checked = (emailPref === 'true');
+    }
+}
+
+if (testStorage() === true) {
 
 // Saves settings to local storage when save button is clicked
 saveButton.addEventListener('click', () => {
@@ -184,17 +200,10 @@ cancelButton.addEventListener('click', () => {
 
 // Runs function to load correct settings
 loadSettings();
-
-// Sets value of ID based on saved profile settings
-const loadSettings = function() {
-    if (emailPref !== null) {
-        email.checked = (emailPref === 'true');
-    }
-    if (profilePref !== null) {
-        profile.checked = (emailPref === 'true');
-    }
 }
 
+document.addEventListener('DOMContentLoaded', loadSettings());
+
 /* ========================================
-Local Storage for Settings widget
+
 ======================================== */
