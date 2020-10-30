@@ -208,10 +208,10 @@ const profilePref = localStorage.getItem('profilePref');
 
 // Sets value of ID based on saved profile settings
 const loadSettings = function() {
-    if (emailPref !== null) {
+    if (emailPref !== 'false') {
         email.checked = (emailPref === 'true');
     }
-    if (profilePref !== null) {
+    if (profilePref !== 'false') {
         profile.checked = (emailPref === 'true');
     }
 }
@@ -230,8 +230,8 @@ cancelButton.addEventListener('click', () => {
     const cancel = confirm('Are you sure you want to cancel changes?');
 
     if (cancel) {
-        localStorage.setItem('emailPref', email.checked = null);
-        localStorage.setItem('profilePref', profile.checked = null);
+        localStorage.setItem('emailPref', email.checked = false);
+        localStorage.setItem('profilePref', profile.checked = false);
     }
 });
 
@@ -242,5 +242,5 @@ loadSettings();
 document.addEventListener('DOMContentLoaded', loadSettings());
 
 /* ========================================
-
+Autocomplete feature for user search
 ======================================== */
