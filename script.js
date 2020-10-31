@@ -61,9 +61,9 @@ bellIcon.addEventListener('click', () => {
 Chart widgets
 ======================================== */
 
-// Creates outline for the line graph
+// Creates outline for the line graph - WEEKLY
 const trafficCanvas = document.getElementById('traffic-chart');
-let trafficData = {
+let trafficDataWeekly = {
     labels: ['16-32', '23-29', '30-5', '6-12', '13-19', '20-26', '27-3', '4-10', '11-17', '18-24', '25-31'],
     datasets: [{
         data: [750, 1250, 1000, 2000, 1500, 1750, 1250, 1850, 2250, 1500, 2500],
@@ -72,6 +72,40 @@ let trafficData = {
         borderWidth: 1,
     }]
 };
+
+// Creates the DAILY chart
+let trafficDataDaily = {
+    labels: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
+    datasets: [{
+        data: [10, 40, 55, 30, 50, 20, 45, 50, 15],
+        backgroundColor: '#7477bf',
+        pointBackgroundColor: 'white',
+        borderWidth: 1,
+    }]
+};
+
+// Creates the HOURLY chart
+let trafficDataHourly = {
+    labels: ['13:00', '14:00', '15:00', '16:00', '17:00', '18:00', '19:00', '20:00', '21:00', '22:00', '23:00', '24:00'],
+    datasets: [{
+        data: [100, 450, 250, 200, 600, 150, 500, 300, 250, 550, 700, 400],
+        backgroundColor: '#7477bf',
+        pointBackgroundColor: 'white',
+        borderWidth: 1,
+    }]
+};
+
+// Creates the MONTHLY chart
+let trafficDataMonthly = {
+    labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
+    datasets: [{
+        data: [50, 30, 35, 65, 80, 40, 70, 30, 25, 55, 70, 40, 50, 90],
+        backgroundColor: '#7477bf',
+        pointBackgroundColor: 'white',
+        borderWidth: 1,
+    }]
+};
+
 // Lets you set the chart options
 let trafficOptions = {
     aspectRatio: 2.5,
@@ -90,11 +124,14 @@ let trafficOptions = {
     }
 };
 // Creates the chart itself
-let trafficChart = new Chart(trafficCanvas, {
-    type: 'line',
-    data: trafficData, 
-    options: trafficOptions
-});
+function createChart(data) {
+    let trafficChart = new Chart(trafficCanvas, {
+        type: 'line',
+        data: data, 
+        options: trafficOptions
+    });
+}
+
 
 // Creates outline for the bar graph
 const dailyCanvas = document.getElementById('daily-chart');
@@ -281,3 +318,32 @@ function checksMatch() {
 // } else {
 //     return false;
 // }
+
+
+/* ========================================
+Chart changes
+======================================== */
+
+const trafficUl = document.getElementById('traffic-ul');
+const hourlyLi = document.getElementById('hourly');
+const dailyLi = document.getElementById('daily');
+const weeklyLi = document.getElementById('weekly');
+const monthlyLi = document.getElementById('monthly');
+
+// Adds event listener to traffic nav and changes chart accordingly
+trafficUl.addEventListener('click', (e) => {
+    if (e.target == hourlyLi) {
+        createChart(trafficDataHourly);
+    } else if (e.target == dailyLi) {
+        createChart(trafficDataDaily);
+    } else if (e.target == weeklyLi) {
+        createChart(trafficDataWeekly);
+    } else if (e.target == monthlyLi) {
+        createChart(trafficDataMonthly);
+    }
+});
+
+// Loads the weekly chart on page load
+document.addEventListener('DOMContentLoaded', () => {
+    createChart(trafficDataWeekly);
+});
