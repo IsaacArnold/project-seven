@@ -244,3 +244,40 @@ document.addEventListener('DOMContentLoaded', loadSettings());
 /* ========================================
 Autocomplete feature for user search
 ======================================== */
+
+let input = document.getElementById('userField');
+const userNames = [
+    'Victoria Chambers',
+    'Dale Byrd',
+    'Dawn Wood',
+    'Dan Oliver'
+];
+
+// Listens for key presses on input field
+function letterPress() {
+    input.addEventListener('keydown', (e) => {
+        const letters = e.key;
+        console.log(letters);
+    });
+}
+
+function createsArray() {
+    for (let i = 0; i < userNames.length; i++) {
+        console.log(userNames[i].split(''));
+    }
+}
+
+letterPress();
+createsArray();
+
+function checksMatch() {
+    if (letterPress().toLowerCase().includes(createsArray().toLowerCase())) {
+        console.log(true);
+    }
+}
+
+// if (letters.toLowerCase().includes(userNames[0].toLowerCase())) {
+//     return true;
+// } else {
+//     return false;
+// }
