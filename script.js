@@ -329,21 +329,31 @@ const hourlyLi = document.getElementById('hourly');
 const dailyLi = document.getElementById('daily');
 const weeklyLi = document.getElementById('weekly');
 const monthlyLi = document.getElementById('monthly');
+const trafficChildren = trafficUl.children;
 
 // Adds event listener to traffic nav and changes chart accordingly
 trafficUl.addEventListener('click', (e) => {
-    if (e.target == hourlyLi) {
-        createChart(trafficDataHourly);
-    } else if (e.target == dailyLi) {
-        createChart(trafficDataDaily);
-    } else if (e.target == weeklyLi) {
-        createChart(trafficDataWeekly);
-    } else if (e.target == monthlyLi) {
-        createChart(trafficDataMonthly);
+    // Creates a function to toggle display chart and 'active' class name depending on li element clicked
+    function toggleChart(listName, chartName) {
+        if (e.target == listName) {
+            createChart(chartName);
+            listName.classList.add('active');
+        } else if (e.target !== listName) {
+            listName.classList.remove('active');
+        }
     }
+    // Hourly chart
+    toggleChart(hourlyLi, trafficDataHourly);
+    // Daily chart
+    toggleChart(dailyLi, trafficDataDaily);
+    // Weekly chart
+    toggleChart(weeklyLi, trafficDataWeekly);
+    // Monthly chart
+    toggleChart(monthlyLi, trafficDataMonthly);
 });
 
 // Loads the weekly chart on page load
 document.addEventListener('DOMContentLoaded', () => {
     createChart(trafficDataWeekly);
+    weeklyLi.classList.add('active');
 });
