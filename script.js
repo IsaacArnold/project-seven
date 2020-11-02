@@ -257,7 +257,8 @@ const loadSettings = function() {
         profile.checked = (emailPref === 'true');
     }
     if (timezonePref !== 'false') {
-        select.value = localStorage.getItem('timezonePref');
+        select.value = localStorage.getItem('timezonePref'); 
+        // getItem() idea from rohald89_FEWD-TD-unit07
     }
 }
 
@@ -270,7 +271,6 @@ saveButton.addEventListener('click', () => {
     lastSelected = select.options[select.selectedIndex].value;
     localStorage.setItem('timezonePref', lastSelected);
     alert('Settings successfully saved!');
-    console.log(lastSelected);
 });
 
 // Sets all settings back to deafult when cancel is pushed
