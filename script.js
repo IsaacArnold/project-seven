@@ -223,6 +223,10 @@ Local Storage for Settings widget
 ======================================== */
 const email = document.getElementById('email');
 const profile = document.getElementById('profile');
+const select = document.getElementById('timezone');
+// Select idea taken from question by user3143218 on stackoverflow
+let selectOption = select.options[select.selectedIndex];
+let lastSelected;
 const saveButton = document.getElementById('save');
 const cancelButton = document.getElementById('cancel');
 
@@ -242,6 +246,7 @@ function testStorage() {
 // Create const for saved values
 const emailPref = localStorage.getItem('emailPref');
 const profilePref = localStorage.getItem('profilePref');
+const timezonePref = localStorage.getItem('select', lastSelected);
 
 // Sets value of ID based on saved profile settings
 const loadSettings = function() {
@@ -251,6 +256,9 @@ const loadSettings = function() {
     if (profilePref !== 'false') {
         profile.checked = (emailPref === 'true');
     }
+    if (timezonePref !== 'false') {
+        select.value = localStorage.getItem('timezonePref');
+    }
 }
 
 if (testStorage() === true) {
@@ -259,7 +267,10 @@ if (testStorage() === true) {
 saveButton.addEventListener('click', () => {
     localStorage.setItem('emailPref', email.checked);
     localStorage.setItem('profilePref', profile.checked);
+    lastSelected = select.options[select.selectedIndex].value;
+    localStorage.setItem('timezonePref', lastSelected);
     alert('Settings successfully saved!');
+    console.log(lastSelected);
 });
 
 // Sets all settings back to deafult when cancel is pushed
@@ -269,6 +280,7 @@ cancelButton.addEventListener('click', () => {
     if (cancel) {
         localStorage.setItem('emailPref', email.checked = false);
         localStorage.setItem('profilePref', profile.checked = false);
+        localStorage.setItem('timezonePref', select.selectedIndex = false);
     }
 });
 
