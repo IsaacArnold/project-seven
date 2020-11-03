@@ -10,7 +10,7 @@ alertBar.innerHTML =
         <p><strong>Alert:</strong> You have <strong>6</strong> overdue tasks to complete</p>
         <p class="alert-banner-close">x</p>
     </div>
-</div>`
+</div>`;
 
 // Adds an event handler to the close button
 alertBar.addEventListener('click', (e) => {
@@ -43,7 +43,7 @@ for (let i = 0; i < notificationItem.length; i++) {
 
 // Function for hiding notifications on page load
 function hideNotifications() {
-    notificationUl.style.display = 'none'
+    notificationUl.style.display = 'none';
 }
 document.addEventListener('DOMContentLoaded', hideNotifications());
 
