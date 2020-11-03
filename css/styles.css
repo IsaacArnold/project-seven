@@ -1087,6 +1087,7 @@ button[id=cancel] {
 .settings {
     margin-left: 0;
     padding-left: 20px;
+    padding-right: 0;
   }
 
   .message,

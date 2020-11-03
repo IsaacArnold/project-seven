@@ -280,7 +280,7 @@ cancelButton.addEventListener('click', () => {
     if (cancel) {
         localStorage.setItem('emailPref', email.checked = false);
         localStorage.setItem('profilePref', profile.checked = false);
-        localStorage.setItem('timezonePref', select.selectedIndex = false);
+        localStorage.setItem('timezonePref', select.selectedIndex = select.options[0].value);
     }
 });
 
