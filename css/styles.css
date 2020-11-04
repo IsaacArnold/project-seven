@@ -817,6 +817,13 @@ button[id=send] {
   color: #fff;
 }
 
+input:focus,
+textarea:focus,
+button:focus,
+select:focus {
+  outline-color: #7477bf;
+}
+
 /* ============================================= */
 /*                Timezone & Button styles       */
 /* ============================================= */

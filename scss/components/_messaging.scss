@@ -43,3 +43,11 @@ button[id='send'] {
         }
     }
 }
+
+
+input:focus,
+textarea:focus,
+button:focus,
+select:focus {
+  outline-color: $brand-color-primary;
+}
