@@ -260,7 +260,7 @@ const loadSettings = function() {
         select.value = localStorage.getItem('timezonePref'); 
         // getItem() idea from rohald89_FEWD-TD-unit07
     }
-}
+};
 
 if (testStorage() === true) {
 
