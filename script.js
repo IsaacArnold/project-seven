@@ -328,3 +328,49 @@ document.addEventListener('DOMContentLoaded', () => {
     createChart(trafficDataWeekly);
     weeklyLi.classList.add('active');
 });
+
+/* ========================================
+Autocomplete function --> Code from YouTube tutorial by FrontendTips 'Autocomplete suggestion box'
+======================================== */
+// Creates an array of objects for the user names
+const userNames = [
+    {name: 'Victoria Chambers'},
+    {name: 'Dale Byrd'},
+    {name: 'Dawn Wood'},
+    {name: 'Dan Oliver'}
+];
+
+// Gets reference to the search input
+const searchInput = document.getElementById('userField');
+const suggestionsPanel = document.querySelector('.suggestions');
+
+// Adds event listener to keyboard when user searches
+searchInput.addEventListener('keyup', () => {
+    // Stores the value of input into a variable
+    const input = searchInput.value.toLowerCase();
+    suggestionsPanel.innerHTML = '';
+    // Filters through the array objects and returns the array if the search begins with the userName
+    const suggestions = userNames.filter(function(names) {
+        return names.name.toLowerCase().includes(input); 
+    });
+    // Appends the divs into the suggestions container
+    suggestions.forEach(function(suggested) {
+        const div = document.createElement('div');
+        div.innerHTML = suggested.name;
+        suggestionsPanel.appendChild(div);
+    });
+    // Clears the input if the search field is empty
+    if (input === '') {
+        suggestionsPanel.innerHTML = ''; 
+    }
+});
+
+// Listens to the clicks on the suggestions div and places the clicked name in the search field
+suggestionsPanel.addEventListener('click', (e) => {
+    const element = e.target.textContent;
+    searchInput.value = element;
+    // Clears the suggestions div panel if an element is clicked
+    if (searchInput.value === element) {
+        suggestionsPanel.style.display = 'none';
+    }
+});

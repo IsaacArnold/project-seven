@@ -777,6 +777,7 @@ input[id=userField],
 textarea[id=messageField] {
   width: 100%;
   margin: 5px 0;
+  position: relative;
 }
 
 button[id=send] {
@@ -786,6 +787,34 @@ button[id=send] {
   color: #fff;
   border: none;
   border-radius: 4px;
+}
+
+.suggestions {
+  position: absolute;
+  z-index: 99;
+  background-color: white;
+  width: 304px;
+  border-radius: 4px;
+  overflow: hidden;
+}
+@media (min-width: 768px) {
+  .suggestions {
+    width: 308px;
+  }
+}
+@media (min-width: 1024px) {
+  .suggestions {
+    width: 448px;
+  }
+}
+.suggestions div {
+  border: 1px solid #d3d3d3;
+  padding: 10px;
+  cursor: pointer;
+}
+.suggestions div:hover {
+  background-color: #7477bf;
+  color: #fff;
 }
 
 /* ============================================= */
