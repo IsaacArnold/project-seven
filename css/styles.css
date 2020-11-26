@@ -606,10 +606,12 @@ h1 {
   align-items: center;
   width: 95%;
   margin: auto;
+  cursor: pointer;
 }
 .alert-banner-content p {
   margin: 5px 0;
   color: #fff;
+  cursor: pointer;
 }
 .alert-banner-content p strong {
   color: white;
